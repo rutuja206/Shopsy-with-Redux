@@ -3,6 +3,7 @@
     "@parcel/resolver-default": "^2.15.4"
   },
   "dependencies": {
+    "immer": "^10.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-redux": "^9.2.0",

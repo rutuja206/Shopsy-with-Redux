@@ -1,8 +1,8 @@
 import { combineReducers, createStore } from 'redux';
 import { productList } from './productList';
-import productsReducer from './productsReducer';
-import cartReducer, { addCartItem, CART_ADDITEM, CART_INCREASE_ITEMQUANTITY, decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem } from './cartReducer';
-import wishListReducer, { addWishlistItem } from './wishListReducer';
+import productsReducer from './productsSlice';
+import cartReducer, { addCartItem, CART_ADDITEM, CART_INCREASE_ITEMQUANTITY, decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem } from './cartSlice';
+import wishListReducer, { addWishlistItem } from './wishListSlice';
 //combine reducers 
 //action creators
 
