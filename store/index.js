@@ -3,6 +3,7 @@ import { productList } from './productList';
 import productsReducer from './productsSlice';
 import cartReducer, { addCartItem, CART_ADDITEM, CART_INCREASE_ITEMQUANTITY, decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem } from './cartSlice';
 import wishListReducer, { addWishlistItem } from './wishListSlice';
+import { configureStore } from '@reduxjs/toolkit';
 //combine reducers 
 //action creators
 
@@ -65,13 +66,16 @@ import wishListReducer, { addWishlistItem } from './wishListSlice';
 //     }
 // }
 
-const reducer = combineReducers({
+// const reducer = combineReducers({
+//     products : productsReducer,
+//     cartItems : cartReducer,
+//     wishList : wishListReducer
+// })
+export const store = configureStore({reducer : {
     products : productsReducer,
     cartItems : cartReducer,
     wishList : wishListReducer
-})
-export const store = createStore(reducer, window. __REDUX_DEVTOOLS_EXTENSION__?.()); //store enhancer
-console.log(store)
+}}); //store enhancer
 
 
 
